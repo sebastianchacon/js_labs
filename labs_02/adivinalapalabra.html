@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Adivina la palabra</title>
+</head>
+<body>
+    <script type="text/javascript">
+            
+
+    alert ("Te desafio a adivinar la la pabra en menos de 10 intentos");
+
+    var intentos =0;
+   
+    var pista = (" pista: aparato que usamos para hacer cosas en la web a diario");
+    var palabra = ("computadora");
+        
+     while(intentos < 9) {  
+
+                
+             alert("intento num "+intentos);
+             var candidato = prompt ("Ingrese la palabra, "+pista);
+             intentos ++
+
+             if (candidato == palabra){
+
+                     alert ("Enhorabuena, lo has conseguido en "+intentos+ " intento/s" );
+                     break
+
+            }else{
+          
+                if (candidato !== palabra){
+                    alert("la palabra es incorrecta");
+    
+                }else{
+                    alert("enhorabuena, la palabra es correcta");
+                }// fin else interno
+            } // fin else
+        }// fin while
+
+    
+
+    </script> 
+  </body>
+</html>
+
+
+
+
