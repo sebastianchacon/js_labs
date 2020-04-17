@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>ejemplo mas complejo</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+
+        alert ("te desafio a encontrar un numero de tres cifras en menos de 10 intentos");
+
+        var intentos =0;
+        var numero = Math.round(Math.random()*(999 - 0)+0);
+
+            while(intentos < 9) {
+                
+        intentos ++
+        alert("intento num "+intentos);
+        var candidato = prompt ("Ingrese el numero");
+        if (candidato == numero){
+
+            alert ("Enhorabuena, lo has conseguido en "+intentos+ " intento/s" );
+        }
+
+        else {
+          
+            if (candidato > numero){
+
+                alert("El numero que buscas es menor");
+                intentos = 100;
+
+            }
+
+            else{
+
+                alert("El numero es mas grande");
+            }
+          
+
+
+        }
+
+    }
+
+        </script> 
+    </body>
+</html>
