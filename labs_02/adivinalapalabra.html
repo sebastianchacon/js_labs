@@ -6,17 +6,17 @@
     <script type="text/javascript">
             
 
-    alert ("Te desafio a adivinar la la pabra en menos de 10 intentos");
+    alert ("Te desafio a adivinar la la pabra en menos de 12 intentos");
 
     var intentos =0;
    
     var pista = (" pista: aparato que usamos para hacer cosas en la web a diario");
     var palabra = ("computadora");
         
-     while(intentos < 9) {  
+     while(intentos < 13) {  
 
                 
-             alert("intento num "+intentos);
+             alert("intento numero "+intentos);
              var candidato = prompt ("Ingrese la palabra, "+pista);
              intentos ++
 
@@ -32,6 +32,8 @@
     
                 }else{
                     alert("enhorabuena, la palabra es correcta");
+
+
                 }// fin else interno
             } // fin else
         }// fin while
