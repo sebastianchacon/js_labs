@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>subir valor numerico y viceversa</title>
+    </head>
+    <body>
+        
+        
+        <script type="text/javascript">
+            
+            var contador= 0;
+
+            function aumentarValor(){
+                contador ++;
+                document.getElementById("numero").innerHTML = contador;
+            }
+
+            function disminuirValor(){
+
+                    if (contador > 0) {
+
+                        contador --;
+                        document.getElementById("numero").innerHTML = contador;
+
+                    }
+
+                            else {
+
+                                alert ("No se aceptan numeros negativos");
+                    
+                             }
+
+
+                
+            }
+
+        </script> 
+
+        <h1 id="numero">0</h1>
+        <form>
+
+            <input type="button" name="Aumentar" value="Aumentar valor" onclick=aumentarValor()> </br>
+            <input type="button" name="Disminuir" value="Disminuir valor" onclick=disminuirValor()> </br>
+        </form>
+    </body>
+</html>
