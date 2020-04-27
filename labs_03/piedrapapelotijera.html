@@ -3,11 +3,118 @@
         <title>piedra papel o tijera</title>
     </head>
     <body>
+        
         <script type="text/javascript">
+
+
+            var ganados=0;
+            var perdidos=0;
+
+            function jugadorElije(fotoelegida,eleccionJugador) {
+
+                document.getElementById("jugador").src=fotoelegida;
+                turnoDelRival(eleccionJugador);
+            }
+
+            function turnoDelRival(eleccionJugador){
+
+                var eleccionRival= Math.round (Math.random ( ) * (3-1)+1);
+
+                if (eleccionRival == 1){
+
+                    eleccionRival= "piedra";
+                    document.getElementById("rival").src='/home/sebastianchacon/projects/js_labs/imagenes/piedra.png'
+                }
+
+                if (eleccionRival == 2){
+
+                    eleccionRival= "papel";
+                    document.getElementById("rival").src='/home/sebastianchacon/projects/js_labs/imagenes/papel.png'
+                }
+
+                if (eleccionRival == 3){
+
+                    eleccionRival= "tijera";
+                    document.getElementById("rival").src='/home/sebastianchacon/projects/js_labs/imagenes/tijera.png'
+                }
+
+                evaluar(eleccionJugador,eleccionRival);
+            }
+
+            function evaluar(eleccionJugador,eleccionRival){
+
+                if(eleccionJugador == eleccionRival){
+
+                    alert("empate!!! ");
+                }
+
+                if(eleccionJugador == 'piedra' && eleccionRival == 'papel'){
+
+                    perdidos++;
+                }
+
+                if(eleccionJugador == 'piedra' && eleccionRival == 'tijera'){
+
+                    ganados++;
+                }
+
+                if(eleccionJugador == 'papel' && eleccionRival == 'tijera'){
+
+                   perdidos++;
+                }
+
+                if(eleccionJugador == 'papel' && eleccionRival == 'piedra'){
+
+                   ganados++;
+                }
+
+                if(eleccionJugador == 'tijera' && eleccionRival == 'piedra'){
+
+                  perdidos++;
+                }
+
+                if(eleccionJugador == 'tijera' && eleccionRival == 'papel'){
+
+                 ganados++;
+                }
+
+
+                actualizarEstadisticas();
+                
+            }
+
+
+            function actualizarEstadisticas(){
+
+                document.getElementById("cantidadGanados").innerHTML= ganados;
+                document.getElementById("cantidadPerdidos").innerHTML= perdidos;
+
+
+            }
+
         </script> 
 
+
         <h1>Piedra Papel o Tijera</h1>
-        <img src="/home/sebastianchacon/projects/js_labs/imagenes/undefined.png" id="jugador" width="200" height="200">
-        
+        <img src="/home/sebastianchacon/projects/js_labs/imagenes/undefined.png" id="jugador" width="200" height="200"/>
+        <form>
+            
+            <input type="button" name="botonPiedra" value="Piedra" onclick=jugadorElije("/home/sebastianchacon/projects/js_labs/imagenes/piedra.png","piedra")>
+            <input type="button" name="botonPapel" value="Papel" onclick=jugadorElije("/home/sebastianchacon/projects/js_labs/imagenes/papel.png","papel")>
+            <input type="button" name="botonTijera" value="Tijera" onclick=jugadorElije("/home/sebastianchacon/projects/js_labs/imagenes/tijera.png","tijera")>
+        <form>
+
+            <h1>El rival ha elegido...</h1>
+            <img src="/home/sebastianchacon/projects/js_labs/imagenes/undefined.png" id="rival" width="200" height="200"/>
+        </br></br>
+
+        <h4>Ganados:</h4>
+        <h4 id="cantidadGanados">0</h4>
+        <h4>Perdidos:</h4>
+        <h4 id="cantidadPerdidos">0</h4>
+
+
+
+
     </body>
 </html>
