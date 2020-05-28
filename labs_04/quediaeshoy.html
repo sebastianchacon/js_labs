@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<center>
+<h4>SERA VIERNES????</h4>
+<script type="text/javascript">
+
+                    diasem = (new Date()).getDay();
+
+                    esviernes = "No";
+                    switch (diasem) {
+                        case 1:
+                            hoy = "LUNES";
+                            txt = "Noooooo";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/lunes.png width= 100 heigh= 100>")
+                            break;
+                        case 2:
+                            hoy = "MARTES";
+                            txt = "Almenos es Mejor ue ayer";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/martes.png width= 100 heigh= 100>")
+                            break;
+                        case 3:
+                            hoy = "MIERCOLES";
+                            txt = "Ya estamos cerca!!";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/miercoles.png width= 100 heigh= 100>")
+                            break;
+                        case 4:
+                            hoy = "JUEVES";
+                            txt = "Ya casiiii!";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/jueves.png width= 100 heigh= 100>")
+                            break;
+                        case 5:
+                            hoy = "VIERNES";
+                            txt = "Es Vierness!!!!";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/viernes.png width= 100 heigh= 100>")
+                            esviernes = "SI";
+                            break;
+                        case 6:
+                            hoy = "SABADO";
+                            txt = "Fiesta!!!!";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/viernes.png width= 100 heigh= 100>")
+                            break;
+                        case 0:
+                            hoy = "DOMINGO";
+                            txt = "Fiestaa pero hay que estar consientes de que mañana es lunes";
+                            document.write("<img src= /home/sacc/projects/code/js_labs/labs_04/images/domingo.png width= 100 heigh= 100>")
+                            break;
+                    }
+
+                    
+                    document.write("<h1>¡¡¡" + esviernes + "!!!</h1>");
+                    document.write("<h3>Hoy es " + hoy + "</h3>");
+                    document.write("<h5>" + txt + "</h5>");
+
+                </script>   
+</body>
+</html>
+</center>
+
