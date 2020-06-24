@@ -1,2 +1,2 @@
 # js_labs
-mis primeras pruebas en js 
+my first test in javascript with html
